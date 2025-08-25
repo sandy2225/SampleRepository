@@ -1,0 +1,43 @@
+Database:
+---------
+SQL:
+----
+DDL:Data Definition Language:
+1)create:
+create table tablename(field1 datatype, field2 datatype...);
+
+create table student(idno number(10),name varchar,branch varchar);
+ 
+2)alter
+3)drop:
+
+drop table tablename;
+4)truncate
+
+DML:Data Manipulation Language:
+insert:
+
+insert into tablename values(1,'XYZ','ECE');
+insert into tablename values(2,'ABC','ECE');
+insert into tablename values(3,'PQR','ECE');
+
+update
+
+
+delete
+delete table tablename;
+
+TCL:Transaction Control Language
+commit
+rollback
+savepoint
+
+DCL:Data Control Language
+
+Grant (admin)
+Revoke (admin)
+
+Data Query Language
+
+select
+

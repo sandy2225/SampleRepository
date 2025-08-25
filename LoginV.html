@@ -1,0 +1,70 @@
+<html>
+<head>
+<style>
+*{
+margin:0;
+padding:0;
+}
+#uerror, #perror{
+display:none;
+}
+
+</style>
+</head>
+<body>
+<h2>Login Page</h2>
+<hr/>
+<form>
+<fieldset style="background-color:#eeeeee;">
+
+<legend style="background-color:gray; color:white; padding:5px 10px">LOGIN PAGE</legend>
+
+<img src="C:\Users\SREE\Desktop\sam1.jpg" width="100px" height="100px">
+<br/>
+<label>UserName:</label><input type="text" id="u" onkeyup="checkvalidation()">
+<p id="uerror" style="color:red; font-size:25px;">Please Provide Username</p>
+
+<br/>
+<label>Password:</label><input type="password" id="p" onkeyup="checkvalidation()">
+<p id="perror" style="color:red; font-size:25px;">Please Provide Password</p>
+
+<br/>
+<script>
+function myfunc(){
+
+}
+
+function checkvalidation(){
+var user = {
+u:document.getElementById("u").value,
+p:document.getElementById("p").value,
+};
+
+var check=false;
+for (a in user){
+if(user[a].length==0)
+{
+check=true;
+}
+}
+
+if(check){
+document.querySelector("button").setAttribute("disabled",true);
+}
+else
+{
+document.querySelector("button").removeAttribute("disabled");
+}
+}
+
+
+</script>
+
+<button type="button" onclick="myfunc()" disabled>SUBMIT</button>&nbsp; &nbsp; &nbsp;
+
+<br/>
+<a href="C:\Users\SREE\Desktop\Register.html">Register Here</a>
+</fieldset>
+</form>
+</body>
+</html>

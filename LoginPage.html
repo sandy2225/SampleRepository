@@ -1,0 +1,69 @@
+<html>
+<head>
+<style>
+*{
+margin:0;
+padding:0;
+}
+
+#uerror, #perror{
+display:none;
+}
+</style>
+
+</head>
+<body>
+<h2>Login Page</h2>
+<hr/>
+<form>
+<fieldset style="background-color:#eeeeee;">
+
+<legend style="background-color:gray; color:white; padding:5px 10px">LOGIN PAGE</legend>
+
+<img src="C:\Users\SREE\Desktop\sam1.jpg" width="100px" height="100px">
+<br/>
+<label>UserName:</label><input type="text" id="u">
+<p style="color:red" id="uerror">Please Enter Username/email</p>
+
+<br/>
+<label>Password:</label><input type="password" id="p">
+<p style="color:red" id="perror">Please Enter Password</p>
+
+
+<br/>
+
+<script>
+function myfunc(){
+
+var user={
+u:document.getElementById("u").value,
+p:document.getElementById("p").value,
+};
+for(a in user)
+{
+validate(a,user[a]);
+}
+}
+
+
+function validate(field, value){
+if(value.length==0)
+{
+document.getElementById(`${field}error`).style.display="block";
+}
+else{
+document.getElementById(`${field}error`).style.display="none";
+}
+}
+
+</script>
+
+
+<button type="button" onclick="myfunc()">SUBMIT</button>&nbsp; &nbsp; &nbsp;
+
+<br/>
+<a href="C:\Users\SREE\Desktop\Register.html">Register Here</a>
+</fieldset>
+</form>
+</body>
+</html>
